@@ -2,7 +2,8 @@
 
 A customized light color theme for [NeoVim](https://neovim.io/) ([LunarVim](https://www.lunarvim.org/)) for Laravel / PHP Developer.
 
-This this is highly inspired by [Firefox Nightly News](https://blog.nightly.mozilla.org/2017/09/11/developer-tools-visual-refresh-coming-to-nightly/)
+This this is highly inspired by [Firefox Nightly News](https://blog.nightly.mozilla.org/2017/09/11/developer-tools-visual-refresh-coming-to-nightly/) and [phpstorm photon theme by 
+Brent Roose](https://github.com/brendt/phpstorm-photon-theme). A big clap for them 👏. 
 
 ## Preview 
 
@@ -26,3 +27,18 @@ This this is highly inspired by [Firefox Nightly News](https://blog.nightly.mozi
 |                                                                      |                                                                      |                                                                      |                                                                      | ![ffffff](https://via.placeholder.com/15/ffffff/ffffff.png) `FFFFFF` |                                                                      |
 
 
+
+## How to Install 
+
+```lua 
+lvim.plugins = {
+    ... 
+    {"tisuchi/neo-artisan-hue"},
+    ... 
+}
+
+-- Apply the color scheme
+lvim.colorscheme = "neo-artisan-hue-light"
+```
+
+Restart your neovim/lunarvim. 
