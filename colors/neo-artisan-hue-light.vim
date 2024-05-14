@@ -11,27 +11,9 @@ endif
 
 let g:colors_name = "neo-artisan-hue-light"
 
-" twilight256 color scheme file
-" Maintainer: Neal Milstein - neal dot milstein at gmail dot com
-" Last Change: 2011 Feb 1
-"
-" This theme copies the colors from the TextMate theme Twilight.
-"
-" The theme is designed to be used on a black background. I only tested it
-" using a 256-color terminal; I do not think it will work on much else (gvim,
-" 8-color terminal, etc.).
-"
-" The functions in this theme that convert hex color codes to the nearest
-" xterm-256 color number are from the theme desert2 (desert256), developed by Henry So, Jr.
-"
-" The colors of this theme are based on the TextMate Twilight theme
-" – www.macromates.com
-
-" set background=dark
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " functions {{{
-    " returns an approximate grey index for the given grey level
     fun <SID>grey_number(x)
         if &t_Co == 88
             if a:x < 23
@@ -70,7 +52,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         endif
     endfun
 
-    " returns the actual grey level represented by the grey index
     fun <SID>grey_level(n)
         if &t_Co == 88
             if a:n == 0
@@ -103,7 +84,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         endif
     endfun
 
-    " returns the palette index for the given grey index
     fun <SID>grey_color(n)
         if &t_Co == 88
             if a:n == 0
@@ -124,7 +104,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         endif
     endfun
 
-    " returns an approximate color index for the given color level
     fun <SID>rgb_number(x)
         if &t_Co == 88
             if a:x < 69
@@ -151,7 +130,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         endif
     endfun
 
-    " returns the actual color level for the given color index
     fun <SID>rgb_level(n)
         if &t_Co == 88
             if a:n == 0
@@ -172,7 +150,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         endif
     endfun
 
-    " returns the palette index for the given R/G/B color indices
     fun <SID>rgb_color(x, y, z)
         if &t_Co == 88
             return 16 + (a:x * 16) + (a:y * 4) + a:z
@@ -181,20 +158,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         endif
     endfun
 
-    " returns the palette index to approximate the given R/G/B color levels
     fun <SID>color(r, g, b)
-        " get the closest grey
         let l:gx = <SID>grey_number(a:r)
         let l:gy = <SID>grey_number(a:g)
         let l:gz = <SID>grey_number(a:b)
 
-        " get the closest color
         let l:x = <SID>rgb_number(a:r)
         let l:y = <SID>rgb_number(a:g)
         let l:z = <SID>rgb_number(a:b)
 
         if l:gx == l:gy && l:gy == l:gz
-            " there are two possibilities
             let l:dgr = <SID>grey_level(l:gx) - a:r
             let l:dgg = <SID>grey_level(l:gy) - a:g
             let l:dgb = <SID>grey_level(l:gz) - a:b
@@ -204,19 +177,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
             let l:db = <SID>rgb_level(l:gz) - a:b
             let l:drgb = (l:dr * l:dr) + (l:dg * l:dg) + (l:db * l:db)
             if l:dgrey < l:drgb
-                " use the grey
                 return <SID>grey_color(l:gx)
             else
-                " use the color
                 return <SID>rgb_color(l:x, l:y, l:z)
             endif
         else
-            " only one possibility
             return <SID>rgb_color(l:x, l:y, l:z)
         endif
     endfun
 
-    " returns the palette index to approximate the 'rrggbb' hex string
     fun <SID>rgb(rgb)
         let l:r = ("0x" . strpart(a:rgb, 0, 2)) + 0
         let l:g = ("0x" . strpart(a:rgb, 2, 2)) + 0
@@ -225,7 +194,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         return <SID>color(l:r, l:g, l:b)
     endfun
 
-    " sets the highlighting for the given group
     fun <SID>X(group, fg, bg, attr)
         if a:fg != ""
             exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
@@ -239,54 +207,109 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     endfun
     " }}}
 
-    call <SID>X("Normal", "ffffff", "", "")
+    call <SID>X("Normal", "24292e", "f5f5f5", "")
+    call <SID>X("Cursor", "f5f5f5", "3e3690", "")
+    call <SID>X("Visual", "24292e", "0366d625", "")
+    call <SID>X("CursorLine", "", "d7dbe041", "")
+    call <SID>X("CursorColumn", "", "d7dbe041", "")
+    call <SID>X("LineNr", "d1d5da", "", "")
+    call <SID>X("CursorLineNr", "24292e", "d7dbe041", "")
+    call <SID>X("Pmenu", "24292e", "f5f5f5", "")
+    call <SID>X("PmenuSel", "24292e", "0366d625", "")
+    call <SID>X("PmenuSbar", "", "e1e4e8", "")
+    call <SID>X("PmenuThumb", "", "0366d6", "")
+    call <SID>X("VertSplit", "e1e4e8", "", "")
+    call <SID>X("StatusLine", "24292e", "e1e4e8", "")
+    call <SID>X("StatusLineNC", "6a737d", "d1d5da", "")
+    call <SID>X("TabLine", "6a737d", "e1e4e8", "")
+    call <SID>X("TabLineFill", "", "f5f5f5", "")
+    call <SID>X("TabLineSel", "ffffff", "0366d6", "")
+    call <SID>X("Whitespace", "d1d5da", "", "")
+    call <SID>X("Comment", "6a737d", "", "")
+    call <SID>X("Constant", "005cc5", "", "")
+    call <SID>X("String", "032f62", "", "")
+    call <SID>X("Character", "005cc5", "", "")
+    call <SID>X("Number", "005cc5", "", "")
+    call <SID>X("Boolean", "005cc5", "", "")
+    call <SID>X("Float", "005cc5", "", "")
+    call <SID>X("Identifier", "24292e", "", "")
+    call <SID>X("Function", "6f42c1", "", "")
+    call <SID>X("Statement", "d73a49", "", "")
+    call <SID>X("Conditional", "d73a49", "", "")
+    call <SID>X("Repeat", "d73a49", "", "")
+    call <SID>X("Label", "d73a49", "", "")
+    call <SID>X("Operator", "d73a49", "", "")
+    call <SID>X("Keyword", "d73a49", "", "")
+    call <SID>X("Exception", "d73a49", "", "")
+    call <SID>X("PreProc", "6f42c1", "", "")
+    call <SID>X("Include", "6f42c1", "", "")
+    call <SID>X("Define", "6f42c1", "", "")
+    call <SID>X("Macro", "6f42c1", "", "")
+    call <SID>X("PreCondit", "6f42c1", "", "")
+    call <SID>X("Type", "005cc5", "", "")
+    call <SID>X("StorageClass", "005cc5", "", "")
+    call <SID>X("Structure", "005cc5", "", "")
+    call <SID>X("Typedef", "005cc5", "", "")
+    call <SID>X("Special", "24292e", "", "")
+    call <SID>X("SpecialChar", "24292e", "", "")
+    call <SID>X("Tag", "24292e", "", "")
+    call <SID>X("Delimiter", "24292e", "", "")
+    call <SID>X("SpecialComment", "24292e", "", "")
+    call <SID>X("Debug", "24292e", "", "")
+    call <SID>X("Underlined", "22863a", "", "")
+    call <SID>X("Ignore", "d1d5da", "", "")
+    call <SID>X("Error", "d73a49", "ffdce0", "")
+    call <SID>X("Todo", "d73a49", "f5f5f5", "")
 
-    " highlight groups
-    "call <SID>X("Cursor", "708090", "f0e68c", "")
-    "CursorIM
-    "Directory
-    "DiffAdd
-    "DiffChange
-    "DiffDelete
-    "DiffText
-    "ErrorMsg
-    "call <SID>X("VertSplit", "c2bfa5", "7f7f7f", "reverse")
-    "call <SID>X("Folded", "ffd700", "4d4d4d", "")
-    "call <SID>X("FoldColumn", "d2b48c", "4d4d4d", "")
-    "call <SID>X("IncSearch", "708090", "f0e68c", "")
-    call <SID>X("LineNr", "CCCCCC", "", "")
-    "call <SID>X("ModeMsg", "D4D4D4", "", "")
-    "call <SID>X("MoreMsg", "2e8b57", "", "")
-    "call <SID>X("NonText", "addbe7", "000000", "bold")
-    "call <SID>X("Question", "00ff7f", "", "")
-    "call <SID>X("Search", "f5deb3", "cd853f", "")
-    "call <SID>X("SpecialKey", "9acd32", "", "")
-    "call <SID>X("StatusLine", "c2bfa5", "000000", "reverse")
-    "call <SID>X("StatusLineNC", "c2bfa5", "7f7f7f", "reverse")
-    "call <SID>X("Title", "cd5c5c", "", "")
-    call <SID>X("Visual", "D3D3D3", "3E3E3E", "reverse")
-    "VisualNOS
-    "call <SID>X("WarningMsg", "fa8072", "", "")
-    "WildMenu
-    "Menu
-    "Scrollbar
-    "Tooltip
+    call <SID>X("DiffAdd", "22863a", "e6ffed", "")
+    call <SID>X("DiffChange", "d73a49", "f8e1d4", "")
+    call <SID>X("DiffDelete", "d73a49", "ffdce0", "")
+    call <SID>X("DiffText", "ffffff", "0366d6", "")
 
-    " syntax highlighting groups
-    call <SID>X("Comment", "828282", "", "")
-    call <SID>X("Constant", "CF6A4C", "", "")
-    call <SID>X("Identifier", "7587A6", "", "none")
-    call <SID>X("Function", "9B703F", "", "")
-    call <SID>X("Define", "CDA869", "", "none")
-    call <SID>X("Statement", "CDA869", "", "")
-    call <SID>X("String", "8F9D6A", "", "")
-    call <SID>X("PreProc", "AFC4DB", "", "")
-    call <SID>X("Type", "F9EE98", "", "")
-    call <SID>X("Special", "DAEFA3", "", "")
-    "Underlined
-    call <SID>X("Ignore", "666666", "", "")
-    "Error
-    call <SID>X("Todo", "ff4500", "eeee00", "")
+    call <SID>X("GitGutterAdd", "22863a", "", "")
+    call <SID>X("GitGutterChange", "d73a49", "", "")
+    call <SID>X("GitGutterDelete", "d73a49", "", "")
+
+    call <SID>X("LspDiagnosticsDefaultError", "d73a49", "", "")
+    call <SID>X("LspDiagnosticsDefaultWarning", "d73a49", "", "")
+    call <SID>X("LspDiagnosticsDefaultInformation", "24292e", "", "")
+    call <SID>X("LspDiagnosticsDefaultHint", "24292e", "", "")
+
+    call <SID>X("TSComment", "6a737d", "", "")
+    call <SID>X("TSConstant", "005cc5", "", "")
+    call <SID>X("TSString", "032f62", "", "")
+    call <SID>X("TSCharacter", "005cc5", "", "")
+    call <SID>X("TSNumber", "005cc5", "", "")
+    call <SID>X("TSBoolean", "005cc5", "", "")
+    call <SID>X("TSFloat", "005cc5", "", "")
+    call <SID>X("TSIdentifier", "24292e", "", "")
+    call <SID>X("TSFunction", "6f42c1", "", "")
+    call <SID>X("TSStatement", "d73a49", "", "")
+    call <SID>X("TSConditional", "d73a49", "", "")
+    call <SID>X("TSRepeat", "d73a49", "", "")
+    call <SID>X("TSLabel", "d73a49", "", "")
+    call <SID>X("TSOperator", "d73a49", "", "")
+    call <SID>X("TSKeyword", "d73a49", "", "")
+    call <SID>X("TSException", "d73a49", "", "")
+    call <SID>X("TSPreProc", "6f42c1", "", "")
+    call <SID>X("TSInclude", "6f42c1", "", "")
+    call <SID>X("TSDefine", "6f42c1", "", "")
+    call <SID>X("TSMacro", "6f42c1", "", "")
+    call <SID>X("TSPreCondit", "6f42c1", "", "")
+    call <SID>X("TSType", "005cc5", "", "")
+    call <SID>X("TSStorageClass", "005cc5", "", "")
+    call <SID>X("TSStructure", "005cc5", "", "")
+    call <SID>X("TSTypedef", "005cc5", "", "")
+    call <SID>X("TSSpecial", "24292e", "", "")
+    call <SID>X("TSSpecialChar", "24292e", "", "")
+    call <SID>X("TSTag", "24292e", "", "")
+    call <SID>X("TSDelimiter", "24292e", "", "")
+    call <SID>X("TSSpecialComment", "24292e", "", "")
+    call <SID>X("TSDebug", "24292e", "", "")
+    call <SID>X("TSUnderlined", "22863a", "", "")
+    call <SID>X("TSIgnore", "d1d5da", "", "")
+    call <SID>X("TSError", "d73a49", "ffdce0", "")
+    call <SID>X("TSTodo", "d73a49", "f5f5f5", "")
 
     " delete functions {{{
     delf <SID>X
@@ -302,3 +325,4 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 endif
 
 " vim: set fdl=0 fdm=marker:
+
