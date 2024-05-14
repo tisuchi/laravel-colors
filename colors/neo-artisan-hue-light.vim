@@ -10,7 +10,7 @@ hi Normal guibg=#f5f5f5 guifg=#24292e
 hi Cursor guifg=#24292e
 hi Visual guibg=#0366d625
 hi CursorLine guibg=#d7dbe041
-hi CursorColumn guibg=#d7dbe041
+hi CursorColumn guibg=#29235f
 hi LineNr guifg=#d1d5da
 hi CursorLineNr guibg=#d7dbe041 guifg=#24292e
 hi Pmenu guibg=#f5f5f5 guifg=#24292e
