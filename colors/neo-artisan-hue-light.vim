@@ -207,6 +207,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     endfun
     " }}}
 
+    call <SID>X("Visual", "", "f1f5f9", "reverse")
     call <SID>X("Normal", "24292e", "f5f5f5", "")
     call <SID>X("Cursor", "f5f5f5", "3e3690", "")
     call <SID>X("Visual", "24292e", "0366d625", "")
