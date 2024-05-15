@@ -58,12 +58,11 @@ hi Statement guifg=#888888 guibg=NONE
 hi Operator guifg=#888888 guibg=NONE
 hi cssAttr guifg=#888888 guibg=NONE
 
-
 hi Pmenu guifg=#888888 guibg=#E2E8F0
 hi SignColumn guibg=#ffffff
 hi Title guifg=#888888
-hi LineNr guifg=#64748B guibg=#ffffff
-hi NonText guifg=#888888 guibg=#ffffff
+hi LineNr guifg=#94a3b8 guibg=#ffffff
+hi NonText guifg=#475569 guibg=#ffffff
 hi Comment guifg=#888888 gui=italic
 hi SpecialComment guifg=#888888 gui=italic guibg=NONE
 hi CursorLine guibg=#E2E8F0
@@ -74,3 +73,13 @@ hi StatusLineNC gui=NONE guibg=#ffffff guifg=#ffffff
 hi Search guibg=#888888 guifg=#ffffff
 hi VertSplit gui=NONE guifg=#dddddd guibg=NONE
 hi Visual gui=NONE guibg=#dddddd
+
+" Changing the color of Neotest indicators
+highlight NeotestRunning guifg=#475569 guibg=NONE
+highlight NeotestFocused guifg=#0ea5e9 guibg=NONE
+highlight NeotestNamespace guifg=#075985 guibg=NONE
+highlight NeotestPassed guifg=#15803d guibg=NONE
+highlight NeotestFailed guifg=#dc2626 guibg=NONE
+highlight NeotestSkipped guifg=#e11d48 guibg=NONE
+
+
