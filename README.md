@@ -1,9 +1,13 @@
-# NeoVim Artisan Hue 
+# NeoVim Artisan Hue
 
-A customized light color theme for [NeoVim](https://neovim.io/) ([LunarVim](https://www.lunarvim.org/)) for Laravel / PHP Developer.
+**NeoVim Artisan Hue** is a modern theme for both Vim and Neovim. This color scheme is designed to be elegant and minimalistic, providing a smooth developer experience. 
+This this is highly inspired by [Firefox Nightly News](https://blog.nightly.mozilla.org/2017/09/11/developer-tools-visual-refresh-coming-to-nightly/) and [phpstorm photon theme by Brent Roose](https://github.com/brendt/phpstorm-photon-theme). A big clap for them 👏. 
 
-This this is highly inspired by [Firefox Nightly News](https://blog.nightly.mozilla.org/2017/09/11/developer-tools-visual-refresh-coming-to-nightly/) and [phpstorm photon theme by 
-Brent Roose](https://github.com/brendt/phpstorm-photon-theme). A big clap for them 👏. 
+## Features
+- Works with both Vim and Neovim
+- Clean and minimal colorscheme
+- Designed for day-to-day coding with a focus on readability
+
 
 ## Preview 
 
@@ -11,7 +15,6 @@ Brent Roose](https://github.com/brendt/phpstorm-photon-theme). A big clap for th
 | ---------------------------- | ----------------------------- |
 | ![Welcome Page](docs/01.png) | ![PHP Class](docs/02.png)     |
 | ![Route.php](docs/03.png)    | ![PHP Unit Test](docs/04.png) |
-
 
 
 ## Color scheme
@@ -28,7 +31,15 @@ Brent Roose](https://github.com/brendt/phpstorm-photon-theme). A big clap for th
 
 
 
-## How to Install 
+## Installation
+
+Add the following to your `init.lua` or `init.vim` to install with [packer.nvim](https://github.com/wbthomason/packer.nvim):
+
+```lua
+use 'tisuchi/neo-artisan-hue'
+```
+
+or
 
 ```lua 
 lvim.plugins = {
@@ -41,4 +52,4 @@ lvim.plugins = {
 lvim.colorscheme = "neo-artisan-hue-light"
 ```
 
-Restart your neovim/lunarvim. 
+Restart your neovim or lunarvim. 
