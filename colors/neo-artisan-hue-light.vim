@@ -7,7 +7,8 @@ if !has('gui_running') && &t_Co < 256
 endif
 
 hi clear
-if exists('syntax_on') syntax reset
+if exists('syntax_on')
+    syntax reset
 endif
 
 let g:colors_name = 'neo-artisan-hue-light'
@@ -51,8 +52,7 @@ hi PmenuSel ctermbg=248 ctermfg=235 guibg=#a7b2cd guifg=#33374c
 hi PmenuThumb ctermbg=237 ctermfg=NONE guibg=#33374c guifg=NONE
 hi PreProc ctermfg=64 guifg=#668e3d
 hi Question ctermfg=64 guifg=#668e3d
-hi QuickFixLine ctermbg=251 ctermfg=237 guibg=#c9cdd7 guifg=#33374c
-hi Search ctermbg=180 ctermfg=94 guibg=#eac6ad guifg=#85512c
+hi QuickFixLine ctermbg=251 ctermfg=237 guibg=#c9cdd7 guifg=#33374c hi Search ctermbg=180 ctermfg=94 guibg=#eac6ad guifg=#85512c
 hi SignColumn ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
 hi Special ctermfg=64 guifg=#668e3d
 hi SpecialKey ctermfg=248 guifg=#a5b0d3
