@@ -306,7 +306,7 @@ hi! link typescriptNull Constant
 hi! link typescriptParens icebergNormalFg
 
 " PHP-specific syntax
-hi! link phpFunction Function " Functions
+hi! link phpFunction Function " Functions declarations
 hi! link phpFunctionCall guifg=#3f83a6  " Function calls
 hi! link phpClass guifg=#7759b4  " Class names
 hi! link phpClassName guifg=#7759b4  " Class name declarations
