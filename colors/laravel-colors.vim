@@ -168,8 +168,7 @@ hi! link rubyFunction Title
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
-hi! link rustFuncCall nahlNormalFg
-hi! link rustFuncName Title
+hi! link rustFuncCall nahlNormalFg hi! link rustFuncName Title
 hi! link rustType Constant
 hi! link sassClass Special
 hi! link shFunction nahlNormalFg
@@ -306,6 +305,26 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage nahlNormalFg
 hi! link typescriptNull Constant
 hi! link typescriptParens nahlNormalFg
+
+" PHP Specific Color
+hi! link phpVarSelector
+hi! link phpOperator
+hi! link phpParent
+hi! link phpMemberSelector
+hi! link phpType
+hi! link phpKeyword
+hi! link phpClass Function
+hi! link phpUseClass
+hi! link phpUseAlias
+hi! link phpInclude
+hi! link phpClassExtends Function
+hi! link phpDocTags
+hi! link phpFunction
+hi! link phpFunctions
+hi! link phpMethodsVar
+hi! link phpMagicConstants
+hi! link phpSuperglobals
+hi! link phpConstants
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
