@@ -306,6 +306,18 @@ hi! link typescriptMessage icebergNormalFg
 hi! link typescriptNull Constant
 hi! link typescriptParens icebergNormalFg
 
+" PHP-specific syntax
+hi phpFunction guifg=#ff00ba " Functions
+hi phpFunctionCall guifg=#3f83a6  " Function calls
+hi phpClass guifg=#7759b4  " Class names
+hi phpClassName guifg=#7759b4  " Class name declarations
+hi phpKeyword guifg=#c57339  " PHP keywords like 'if', 'else', 'return'
+hi phpParent guifg=#33374c  " Parenthesis and operators
+hi phpType guifg=#668e3d  " Data types (int, string, bool)
+hi phpVarSelector guifg=#cc517a  " PHP variables ($variable)
+hi phpInclude guifg=#2d539e  " include/require statements
+hi phpConstant guifg=#cc517a  " PHP constants like TRUE, FALSE
+
 if !has('nvim')
   hi! link SpecialKey Whitespace
 endif
