@@ -5,10 +5,9 @@
 if !has('gui_running') && &t_Co < 256
   finish
 endif
-
 hi clear
 if exists('syntax_on')
-    syntax reset
+  syntax reset
 endif
 
 let g:colors_name = 'neo-artisan-hue-light'
