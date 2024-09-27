@@ -168,7 +168,8 @@ hi! link rubyFunction Title
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
-hi! link rustFuncCall nahlNormalFg hi! link rustFuncName Title
+hi! link rustFuncCall nahlNormalFg
+hi! link rustFuncName Title
 hi! link rustType Constant
 hi! link sassClass Special
 hi! link shFunction nahlNormalFg
