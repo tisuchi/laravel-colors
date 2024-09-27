@@ -1,7 +1,7 @@
-# NeoVim Artisan Hue
+# Laravel Colors
 
-**NeoVim Artisan Hue** is a modern theme for both Vim and Neovim. This color scheme is designed to be elegant and minimalistic, providing a smooth developer experience. 
-This this is highly inspired by [Firefox Nightly News](https://blog.nightly.mozilla.org/2017/09/11/developer-tools-visual-refresh-coming-to-nightly/) and [phpstorm photon theme by Brent Roose](https://github.com/brendt/phpstorm-photon-theme). A big clap for them 👏. 
+**Laravel Colors** is a modern theme for both Vim and Neovim. This color scheme is designed to be elegant and minimalistic, providing a smooth developer experience. 
+This this is highly inspired by [Ice Berg](https://github.com/cocopon/iceberg.vim/tree/master). A big clap for that 👏. 
 
 ## Features
 - Works with both Vim and Neovim
@@ -36,7 +36,7 @@ This this is highly inspired by [Firefox Nightly News](https://blog.nightly.mozi
 Add the following to your `init.lua` or `init.vim` to install with [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
-use 'tisuchi/neo-artisan-hue'
+use 'tisuchi/laravel-colors'
 ```
 
 or
@@ -44,12 +44,12 @@ or
 ```lua 
 lvim.plugins = {
     ... 
-    {"tisuchi/neo-artisan-hue"},
+    {"tisuchi/laravel-colors"},
     ... 
 }
 
 -- Apply the color scheme
-lvim.colorscheme = "neo-artisan-hue-light"
+lvim.colorscheme = "laravel-colors"
 ```
 
 Restart your neovim or lunarvim. 
