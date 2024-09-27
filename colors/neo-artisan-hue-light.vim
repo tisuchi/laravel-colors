@@ -13,7 +13,7 @@ endif
 
 let g:colors_name = 'neo-artisan-hue-light'
 
-hi Normal ctermbg=254 ctermfg=237 guibg=#e8e9ec guifg=#33374c
+hi Normal ctermbg=254 ctermfg=237 guibg=#e8e9ec guifg=#ffffff
 hi ColorColumn cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
 hi CursorColumn cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
 hi CursorLine cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
@@ -26,7 +26,7 @@ hi Delimiter ctermfg=237 guifg=#33374c
 hi DiffAdd ctermbg=79 ctermfg=23 guibg=#d4dbd1 guifg=#475946
 hi DiffChange ctermbg=116 ctermfg=24 guibg=#ced9e1 guifg=#375570
 hi DiffDelete cterm=NONE ctermbg=181 ctermfg=89 gui=NONE guibg=#e3d2da guifg=#70415e
-hi DiffText cterm=NONE ctermbg=73 ctermfg=24 gui=NONE guibg=#acc5d3 guifg=#33374c
+hi DiffText cterm=NONE ctermbg=73 ctermfg=24 gui=NONE guibg=NONE guifg=#ff00ba
 hi Directory ctermfg=31 guifg=#3f83a6
 hi Error ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
 hi ErrorMsg ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
@@ -309,3 +309,4 @@ hi! link typescriptParens icebergNormalFg
 if !has('nvim')
   hi! link SpecialKey Whitespace
 endif
+
