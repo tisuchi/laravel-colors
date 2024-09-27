@@ -13,7 +13,7 @@ endif
 
 let g:colors_name = 'neo-artisan-hue-light'
 
-hi Normal ctermbg=234 ctermfg=252 guibg=#ffffff guifg=#cdd1e6
+hi Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=ff00ba
 hi ColorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
 hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
 hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
