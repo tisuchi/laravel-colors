@@ -7,8 +7,7 @@ if !has('gui_running') && &t_Co < 256
 endif
 
 hi clear
-if exists('syntax_on')
-  syntax reset
+if exists('syntax_on') syntax reset
 endif
 
 let g:colors_name = 'neo-artisan-hue-light'
@@ -36,7 +35,7 @@ hi NonText ctermfg=251 guifg=#cbcfda
 hi Whitespace ctermfg=251 guifg=#cbcfda
 hi Folded ctermbg=253 ctermfg=243 guibg=#dcdfe7 guifg=#788098
 hi FoldColumn ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
-hi Function ctermfg=25 guifg=#2d539e
+hi Function ctermfg=25 guifg=#ff00ba
 hi Identifier cterm=NONE ctermfg=31 guifg=#3f83a6
 hi Ignore ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 hi Include ctermfg=25 guifg=#2d539e
@@ -307,16 +306,16 @@ hi! link typescriptNull Constant
 hi! link typescriptParens icebergNormalFg
 
 " PHP-specific syntax
-hi phpFunction guifg=#ff00ba " Functions
-hi phpFunctionCall guifg=#3f83a6  " Function calls
-hi phpClass guifg=#7759b4  " Class names
-hi phpClassName guifg=#7759b4  " Class name declarations
-hi phpKeyword guifg=#c57339  " PHP keywords like 'if', 'else', 'return'
-hi phpParent guifg=#33374c  " Parenthesis and operators
-hi phpType guifg=#668e3d  " Data types (int, string, bool)
-hi phpVarSelector guifg=#cc517a  " PHP variables ($variable)
-hi phpInclude guifg=#2d539e  " include/require statements
-hi phpConstant guifg=#cc517a  " PHP constants like TRUE, FALSE
+hi! link phpFunction Function " Functions
+hi! link phpFunctionCall guifg=#3f83a6  " Function calls
+hi! link phpClass guifg=#7759b4  " Class names
+hi! link phpClassName guifg=#7759b4  " Class name declarations
+hi! link phpKeyword guifg=#c57339  " PHP keywords like 'if', 'else', 'return'
+hi! link phpParent guifg=#33374c  " Parenthesis and operators
+hi! link phpType guifg=#668e3d  " Data types (int, string, bool)
+hi! link phpVarSelector guifg=#cc517a  " PHP variables ($variable)
+hi! link phpInclude guifg=#2d539e  " include/require statements
+hi! link phpConstant guifg=#cc517a  " PHP constants like TRUE, FALSE
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
