@@ -1,4 +1,4 @@
-" File:       neo-artisan-hue-light.vim
+" File:       laravel-colors.vim
 " Maintainer: Thouhedul Islam Suchi <tisuchi@gmail.com>
 " Inspiration: Iceberg <https://github.com/cocopon/iceberg.vim/tree/master>
 " License:    MIT
