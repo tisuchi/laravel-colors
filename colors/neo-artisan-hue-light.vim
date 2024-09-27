@@ -13,7 +13,7 @@ endif
 
 let g:colors_name = 'neo-artisan-hue-light'
 
-hi Normal ctermbg=254 ctermfg=237 guibg=#e8e9ec guifg=#33374c
+hi Normal ctermbg=254 ctermfg=237 guibg=#888888 guifg=#ffffff
 hi ColorColumn cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
 hi CursorColumn cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
 hi CursorLine cterm=NONE ctermbg=253 ctermfg=NONE guibg=#dcdfe7 guifg=NONE
@@ -44,7 +44,8 @@ hi IncSearch cterm=reverse ctermfg=NONE gui=reverse guifg=NONE term=reverse
 hi LineNr ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
 hi MatchParen ctermbg=250 ctermfg=0 guibg=#bec0c9 guifg=#33374c
 hi ModeMsg ctermfg=244 guifg=#8389a3
-hi MoreMsg ctermfg=64 guifg=#668e3d hi Operator ctermfg=25 guifg=#2d539e
+hi MoreMsg ctermfg=64 guifg=#668e3d
+hi Operator ctermfg=25 guifg=#2d539e
 hi Pmenu ctermbg=251 ctermfg=237 guibg=#cad0de guifg=#33374c
 hi PmenuSbar ctermbg=251 ctermfg=NONE guibg=#cad0de guifg=NONE
 hi PmenuSel ctermbg=248 ctermfg=235 guibg=#a7b2cd guifg=#33374c
