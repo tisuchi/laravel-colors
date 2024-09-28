@@ -310,10 +310,10 @@ hi! link typescriptParens nahlNormalFg
 " PHP Specific Color
 " hi! link phpVarSelector
 " hi! link phpOperator
-" hi! link phpParent
+hi! link phpParent Error
 " hi! link phpMemberSelector
-" hi! link phpType
-" hi! link phpKeyword
+hi! link phpType Error
+hi! link phpKeyword Constant
 hi! link phpClass Function
 " hi! link phpUseClass
 " hi! link phpUseAlias
